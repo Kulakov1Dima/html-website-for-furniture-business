@@ -14,6 +14,14 @@
 				display:inline-block;
 				background-color: #008B8B;
 			}
+
+			#mobile_menu {
+				display: none;		
+			}
+
+			#mobile_view{
+				display: none;
+			}
 				
 			nav{
 				top: 0.5em;
@@ -41,7 +49,7 @@
 			
 			.round {
 				padding: 1%;
-    				border-radius: 8%;
+    			border-radius: 8%;
    			}
    			
    			@media screen and (orientation:portrait) and (max-width: 980px) {
@@ -53,15 +61,164 @@
    				#nav_link {
 					display: none;
 				}
+				
+				#mobile_menu {
+					top: 0.1em;
+					position: sticky;
+					display: flow-root;
+					background: #008B8B;
+  					border-radius: 60%;
+  					border: 2px solid #008B8B;
+  					color: #fff;
+					height: 4em;
+  					width: 4em;
+				}
+
+				#some_mobile_menu{
+  					position: fixed;
+  					top: -70vw;
+  					left: -70vw;
+  					width: 120vw;
+  					height: 120vw;
+  					border: 2px solid #000000;
+  					border-radius: 45%;
+  					padding: 1.4644em;
+  					background: #000000;
+  					opacity: 0.85;
+  					display: none;
+				}
+
+				#mobile_header{
+					position: fixed;
+					top: 5vw;
+					left: 4vw;
+					color: White;
+  					font-family: 'Courier New';	 
+  					font-size:4.7vw;
+  					display: none;
+				}
+
+				#mobile_view{
+					display: block;
+				}
+
+				#vk{
+					position: fixed;
+  					top: 12vw;
+  					left: 2vw;
+					padding: 5px;
+					border-radius: 18px;
+					background-color: #276cba;
+					color: White;
+					font-family: 'Courier New';	 
+					font-size:4.5vw;
+					text-decoration:none;
+					display: none;
+				}
+
+				#vk:hover {
+					background-color: White;
+					opacity: 0.7;
+					color: Black;
+				}
+				
+				#price {
+					position: fixed;
+  					top: 15vw;
+  					left: 25vw;
+					padding: 5px;
+					border-radius: 18px;
+					background-color: #008B8B;
+					color: White;
+					font-family: 'Courier New';	 
+					font-size:4.5vw;
+					text-decoration:none;
+					display: none;
+				}
+
+				#price:hover {
+					background-color: White;
+					opacity: 0.7;
+					color: Black;
+				}
+
+				#bay {
+					position: fixed;
+  					top: 27vw;
+  					left: 6vw;
+					padding: 5px;
+					border-radius: 18px;
+					background-color: #d76d17;
+					color: White;
+					font-family: 'Courier New';	 
+					font-size:4.5vw;
+					text-decoration:none;
+					display: none;
+				}
+
+				#bay:hover {
+					background-color: White;
+					opacity: 0.7;
+					color: Black;
+				}
+
+				.circle-icon {
+  					fill: currentColor;
+ 				 	height: 50%;
+  					left: 50%;
+  					position: absolute;
+  					stroke: #ffffff;
+  					stroke-width: 0;
+  					top: 50%;
+  					transform: translate(-50%, -50%);
+  					width: 50%;
+				}
+
 			}
 		</style>
-	</head>
+
+		<script>
+			function viewMenu(){
+				document.getElementById("some_mobile_menu").style.display = "block";
+				document.getElementById("mobile_header").style.display = "block";
+				document.getElementById("vk").style.display = "block";
+				document.getElementById("price").style.display = "block";
+				document.getElementById("bay").style.display = "block";
+			};
+			function noviewMenu(){
+				document.getElementById("some_mobile_menu").style.display = "none";
+				document.getElementById("mobile_header").style.display = "none";
+				document.getElementById("vk").style.display = "none";
+				document.getElementById("price").style.display = "none";
+				document.getElementById("bay").style.display = "none";
+			};
+		</script>
 	
 	<body>
+
 		<nav>
 			<li id = "nav_main">МегаМебель</li>
 			<li id = "nav_link"><a>Заказать</a></li>
 		</nav>
-		<img src = "Обложка.jpg" width = "98%" class = "round">
+
+		<div id = "mobile_menu" onclick="viewMenu()">
+			<svg class="circle-icon" viewBox="0 0 24 24" width="100px" height="100px">
+				<line x1="2" x2="22" y1="5"  y2="5"  stroke-width="3" stroke-linecap="round"/>
+    			<line x1="2" x2="22" y1="12" y2="12" stroke-width="3" stroke-linecap="round"/>
+    			<line x1="2" x2="22" y1="19" y2="19" stroke-width="3" stroke-linecap="round"/>
+			</svg>
+		</div>
+
+		<div onclick="noviewMenu()">
+			<div id = "mobile_view">
+				<div id="some_mobile_menu"></div>
+				<div id="mobile_header">МегаМебель в Пензе</div>
+				<a id="vk" href="https://vk.com/nikitaandreykin">vk.com</a>
+				<a id="price" href="">Прайс лист</a>
+				<a id="bay" href="">Заказать</a>
+			</div>
+			<img src = "Обложка.jpg" width = "98%" class = "round">
+		</div>
+		
 	</body>
 </html>
