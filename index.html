@@ -3,10 +3,45 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>МегаМебель | Мебель в Пензе</title>
 		<style type="text/css">
+@import url(https://fonts.googleapis.com/css?family=Russo+One);    
+			.logotype4 {
+    			position: relative;
+    			color: #af4514b8;
+    			letter-spacing: 3px;
+    			display: inline-block;
+    			line-height: 3vh;
+   		 		font-size: 3.5vw;
+    			font-family: 'Russo One', sans-serif;
+    			font-variant: small-caps;
+    			transition: color 0.3s ease-in-out;
+    			text-shadow: 1px 1px #0b0b0b, 3px 3px;
+    			margin-bottom: 20px;
+			}
+			.logotype4 b {
+    			font-variant: normal;
+			}	
+			.logotype4 div {
+    			position: absolute;
+    			font-size: 3vw;
+    			text-shadow: 1px 1px #fffcf5;
+    			transition: all 0.3s ease-in-out;
+    			letter-spacing: 0;
+    			left: 0;
+    			white-space: nowrap;
+    			transform: translateX(0);
+			}
+
+			.logotype4:hover div {
+    			left: 100%;
+    			transform: translateX(-100%);
+			}
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 			#nav_main {
 				display:inline-block;
 				padding: 15px 10px;
-				font-size: 2.3rem;
+				background-color: #008b1e;
+				font-size: 3vw;
 				color: white;
 			}
 				
@@ -32,11 +67,11 @@
 				
 			nav a {
 				display:block;
-				padding:1px 10px;
+				padding:1vw 1vw;
 				color:#FFF;
 				font-family: 'Times New Roman';	 
-				font-size: 2.3rem;
-				line-height: 11vh;
+				font-size: 2.3vw;
+				line-height: 9vh;
 				border-radius: 20px 40px 20px 40px;
 				border-color: none;
 				text-decoration:none;
@@ -84,7 +119,7 @@
   					border-radius: 45%;
   					padding: 1.4644em;
   					background: #000000;
-  					opacity: 0.85;
+  					opacity: 0.6;
   					display: none;
 				}
 
@@ -104,7 +139,7 @@
 
 				#vk{
 					position: fixed;
-  					top: 12vw;
+  					top: 15vw;
   					left: 2vw;
 					padding: 5px;
 					border-radius: 18px;
@@ -145,7 +180,7 @@
 				#bay {
 					position: fixed;
   					top: 27vw;
-  					left: 6vw;
+  					left: 2vw;
 					padding: 5px;
 					border-radius: 18px;
 					background-color: #d76d17;
@@ -197,8 +232,12 @@
 	<body>
 
 		<nav>
-			<li id = "nav_main">МегаМебель</li>
-			<li id = "nav_link"><a>Заказать</a></li>
+			<li id = "nav_main" class="logotype4" style="padding-left:20px;">
+				<b>Мега</b>Мебель
+			</li>
+			<li id = "nav_link"><a href="https://disk.yandex.ru/i/NFhp3HDIbG_hrA">Прайс лист</a></li>
+			<li id = "nav_link"><a href="https://vk.com/nikitaandreykin">vk.com</a></li>
+			<li id = "nav_link"><a href="https://vk.com/nikitaandreykin">Заказать</a></li>
 		</nav>
 
 		<div id = "mobile_menu" onclick="viewMenu()">
@@ -214,7 +253,7 @@
 				<div id="some_mobile_menu"></div>
 				<div id="mobile_header">МегаМебель в Пензе</div>
 				<a id="vk" href="https://vk.com/nikitaandreykin">vk.com</a>
-				<a id="price" href="">Прайс лист</a>
+				<a id="price" href="https://disk.yandex.ru/i/NFhp3HDIbG_hrA">Прайс лист</a>
 				<a id="bay" href="">Заказать</a>
 			</div>
 			<img src = "Обложка.jpg" width = "98%" class = "round">
