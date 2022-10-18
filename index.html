@@ -36,9 +36,53 @@
     			transform: translateX(-100%);
 			}
 
+			.container {
+    			position: relative;
+   	 			text-align: center;
+    			color: white;
+			}
+
+			/* Bottom left text */
+			.bottom-left {
+    			position: absolute;
+    			bottom: 8px;
+    			left: 16px;
+			}
+
+			/* Top left text */
+			.top-left {
+    			position: absolute;
+    			top: 8px;
+    			left: 16px;
+			}
+
+			/* Top right text */
+			.top-right {
+    			position: absolute;
+    			top: 8px;
+    			right: 16px;
+			}
+
+			/* Bottom right text */
+			.bottom-right {
+    			position: absolute;
+    			bottom: 8px;
+    			right: 16px;
+			}
+
+			/* Centered text */
+			.centered {
+				font-size: 4.5vw;
+    			position: absolute;
+    			top: 50%;
+    			left: 50%;
+				transform: translate(-50%, -50%);
+			}
+
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 			#nav_main {
-				display:inline-block;
+				position: fixed;
+				display:block;
 				padding: 15px 10px;
 				background-color: #008b1e;
 				font-size: 3vw;
@@ -61,8 +105,10 @@
 			nav{
 				top: 0.5em;
 				position: sticky;
+				display: block;
 				background-color: #008B8B;
 				border-radius:20px 40px 40px 40px;
+				z-index:99999999;
 			}
 				
 			nav a {
@@ -115,6 +161,7 @@
   					left: -70vw;
   					width: 120vw;
   					height: 120vw;
+					z-index:99999999;
   					border: 2px solid #000000;
   					border-radius: 45%;
   					padding: 1.4644em;
@@ -127,6 +174,7 @@
 					position: fixed;
 					top: 5vw;
 					left: 4vw;
+					z-index:99999999;
 					color: White;
   					font-family: 'Courier New';	 
   					font-size:4.7vw;
@@ -141,6 +189,7 @@
 					position: fixed;
   					top: 15vw;
   					left: 2vw;
+					z-index:99999999;
 					padding: 5px;
 					border-radius: 18px;
 					background-color: #276cba;
@@ -153,6 +202,7 @@
 
 				#vk:hover {
 					background-color: White;
+					z-index:99999999;
 					opacity: 0.7;
 					color: Black;
 				}
@@ -162,6 +212,7 @@
   					top: 15vw;
   					left: 25vw;
 					padding: 5px;
+					z-index:99999999;
 					border-radius: 18px;
 					background-color: #008B8B;
 					color: White;
@@ -173,6 +224,7 @@
 
 				#price:hover {
 					background-color: White;
+					z-index:99999999;
 					opacity: 0.7;
 					color: Black;
 				}
@@ -181,6 +233,7 @@
 					position: fixed;
   					top: 27vw;
   					left: 2vw;
+					z-index:99999999;
 					padding: 5px;
 					border-radius: 18px;
 					background-color: #d76d17;
@@ -193,6 +246,7 @@
 
 				#bay:hover {
 					background-color: White;
+					z-index:99999999;
 					opacity: 0.7;
 					color: Black;
 				}
@@ -256,7 +310,11 @@
 				<a id="price" href="https://disk.yandex.ru/i/NFhp3HDIbG_hrA">Прайс лист</a>
 				<a id="bay" href="">Заказать</a>
 			</div>
-			<img src = "Обложка.jpg" width = "98%" class = "round">
+
+			<div class="container">
+				<img src = "Обложка.jpg" width = "98%" class = "round">
+				<div class="centered">Любая корпусная мебель</div>
+			</div>
 		</div>
 		
 	</body>
